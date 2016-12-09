@@ -125,6 +125,7 @@ start_listener(Listener, Handlers, Opts, UserCowboyProtoOpts) ->
             update_listener_bucket({Listener, {Handlers, Opts3}}),
             print_info(Listener, IP, Port);
         _ ->
+            io:format("~p~n",[Res]),
             ok
     end,
     Res.
